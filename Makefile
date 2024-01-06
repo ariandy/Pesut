@@ -24,4 +24,5 @@ all: ${OBJECTS}
 
 clean:
 	rm ./main
+	rm ./test
 	rm -rf ${OBJECTS}
