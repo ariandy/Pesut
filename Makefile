@@ -1,4 +1,4 @@
-OBJECTS= ./build/compiler.o ./build/cprocess.o ./build/lexer.o ./build/lex_process.o ./build/vector.o
+OBJECTS= ./build/compiler.o ./build/cprocess.o ./build/lexer.o ./build/lex_process.o ./build/vector.o ./build/buffer.o
 INCLUDES= -I./
 
 all: ${OBJECTS}
@@ -12,6 +12,9 @@ all: ${OBJECTS}
 
 ./build/vector.o: ./vector.c
 	gcc ./vector.c ${INCLUDES} -o ./build/vector.o -g -c
+
+./build/buffer.o: ./buffer.c
+	gcc ./buffer.c ${INCLUDES} -o ./build/buffer.o -g -c
 
 ./build/lexer.o: ./lexer.c
 	gcc ./lexer.c ${INCLUDES} -o ./build/lexer.o -g -c
