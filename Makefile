@@ -1,4 +1,4 @@
-OBJECTS= ./build/compiler.o ./build/cprocess.o
+OBJECTS= ./build/compiler.o ./build/cprocess.o ./build/vector.o
 INCLUDES= -I./
 
 all: ${OBJECTS}
@@ -9,6 +9,9 @@ all: ${OBJECTS}
 
 ./build/cprocess.o: ./cprocess.c
 	gcc ./cprocess.c ${INCLUDES} -o ./build/cprocess.o -g -c
+
+./build/helpers/vector.o: ./helpers/vector.c
+	gcc ./helpers/vector.c ${INCLUDES} -o ./build/helpers/vector.o -g -c
 
 clean:
 	rm ./main
